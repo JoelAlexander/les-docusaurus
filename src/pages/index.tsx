@@ -20,7 +20,14 @@ export default function Home(): ReactNode {
 
       <main className="container margin-vert--lg">
         <section className={styles.instructionsSection}>
-          <h2>1. Generate an SSH Key</h2>
+          <h2>1. Set Up a GitHub Account</h2>
+          <ul>
+            <li>
+              <a href="https://github.com/join" target="_blank" rel="noopener noreferrer">Create a GitHub account</a> if you don't have one already.
+            </li>
+          </ul>
+
+          <h2>2. Generate an SSH Key</h2>
           <ul>
             <li>
               <code>ssh-keygen -t ed25519 -C "your_email@example.com"</code><br/>
@@ -32,7 +39,7 @@ export default function Home(): ReactNode {
             </li>
             <li>
               <code>cat ~/.ssh/id_ed25519.pub</code><br/>
-              <em>Copy/paste that public key to share with Joel.  Joel will use this public key to grant you access to the repository.</em>
+              <em>Copy/paste that public key to share with Joel. Joel will use this public key to grant you access to the repository.</em>
             </li>
             <li>
               <code>echo 'eval "$(ssh-agent -s)" &amp;&amp; ssh-add ~/.ssh/id_ed25519' &gt;&gt; ~/.bashrc</code><br/>
@@ -40,7 +47,7 @@ export default function Home(): ReactNode {
             </li>
           </ul>
 
-          <h2>2. Configure Git</h2>
+          <h2>3. Configure Git</h2>
           <ul>
             <li>
               <code>sudo apt-get update && sudo apt-get install git -y</code><br/>
@@ -58,7 +65,7 @@ export default function Home(): ReactNode {
             </li>
           </ul>
 
-          <h2>3. Install Node via NVM</h2>
+          <h2>4. Install Node via NVM</h2>
           <ul>
             <li>
               <code>curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash</code><br/>
@@ -74,7 +81,7 @@ export default function Home(): ReactNode {
             </li>
           </ul>
 
-          <h2>4. Clone the Project Repository</h2>
+          <h2>5. Clone the Project Repository</h2>
           <ul>
             <li>
               <code>git clone git@github.com:JoelAlexander/les-docusaurus.git</code><br/>
@@ -93,7 +100,7 @@ export default function Home(): ReactNode {
             </li>
           </ul>
 
-          <h2>5. Make and Publish Changes</h2>
+          <h2>6. Make and Publish Changes</h2>
           <ul>
             <li>
               Edit any file, e.g. <code>pages/index.tsx</code>, and save changes.
