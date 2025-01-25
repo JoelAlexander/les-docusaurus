@@ -25,6 +25,9 @@ export default function Home(): ReactNode {
             <li>
               <a href="https://github.com/join" target="_blank" rel="noopener noreferrer">Create a GitHub account</a> if you don't have one already.
             </li>
+            <li>
+              <em>Make sure to provide your GitHub username to Joel so he can grant you access to the repository.</em>
+            </li>
           </ul>
 
           <h2>2. Generate an SSH Key</h2>
@@ -40,6 +43,9 @@ export default function Home(): ReactNode {
             <li>
               <code>cat ~/.ssh/id_ed25519.pub</code><br/>
               <em>Copy/paste that public key to share with Joel. Joel will use this public key to grant you access to the repository.</em>
+            </li>
+            <li>
+              <em>To add your SSH key to your GitHub account, go to <strong>Settings &gt; SSH and GPG keys</strong> and click <strong>New SSH key</strong>. Paste your public key there and save.</em>
             </li>
             <li>
               <code>echo 'eval "$(ssh-agent -s)" &amp;&amp; ssh-add ~/.ssh/id_ed25519' &gt;&gt; ~/.bashrc</code><br/>
